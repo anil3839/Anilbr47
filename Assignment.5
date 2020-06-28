@@ -1,0 +1,706 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": " Assignment .5",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/anil3839/Anilbr47/blob/master/Assignment.5\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "L-xSPw9kA-y_",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lZXd7sQVBAwN",
+        "colab_type": "text"
+      },
+      "source": [
+        " 1.Write a Python program to find area of a circle using math function"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "8FbzmeY4BG4U",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "9c618cf2-9a67-4dfc-dd73-2d693736bc80"
+      },
+      "source": [
+        " def area_of_circle(r):\n",
+        "   import math\n",
+        "   a=math.pi*r**2\n",
+        "   return a\n",
+        " \n",
+        " r=float(input('enter radius of a circle'))\n",
+        "print(\"%.2f\"%area_of_circle(r))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter radius of a circle3\n",
+            "28.27\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "YCtCtvJkBT4G",
+        "colab_type": "text"
+      },
+      "source": [
+        " 2.Write a program to find Area of Regular Polygon using math function"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "42zSR2b1BZly",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 89
+        },
+        "outputId": "ff316498-423c-4e31-fcec-b08cfb58dff8"
+      },
+      "source": [
+        " X= float(input(\"Enter the length of any side: \"))\n",
+        "Y= int(input(\"Enter the number of sides in the regular polygon: \"))\n",
+        "import math\n",
+        "numerator= math.pow(X,2)*Y\n",
+        "denominator= 4*(math.tan(math.pi/Y))\n",
+        "area= numerator/denominator\n",
+        "print(\"The area of the regular polygon is:\",area)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter the length of any side: 6\n",
+            "Enter the number of sides in the regular polygon: 6\n",
+            "The area of the regular polygon is: 93.53074360871938\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "e5XxdfM6Bprq",
+        "colab_type": "text"
+      },
+      "source": [
+        " .Write a program to find Area of a Segment of a Circle Formula using math function."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "fEL3VpO1Bt1k",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 89
+        },
+        "outputId": "141cba4e-7a6d-47c8-ccb8-84dca355df21"
+      },
+      "source": [
+        " X=float(input('enter the radius of the circle'))\n",
+        "Y=int(input('enter the value of central angle in degrees:'))\n",
+        "import math\n",
+        "part_one= (math.pow(X,2))/2\n",
+        "part_two= ((((math.pi)/180)*Y)-math.sin(Y))\n",
+        "area= part_one*part_two\n",
+        "print(\"Area of the segment of a circle of radius\",X, \"and central angle\",Y,\"is:\",area)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter the radius of the circle4\n",
+            "enter the value of central angle in degrees:5\n",
+            "Area of the segment of a circle of radius 4.0 and central angle 5 is: 8.36952589810284\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5UAQ-_8yCES4",
+        "colab_type": "text"
+      },
+      "source": [
+        " 4.Write a python program to shuffle list l1=[100,1,2,3,30,40,”hai”,”hello”]."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "nchZpab7CIin",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "outputId": "a96b168f-23c6-445b-a535-34b2c2d25b58"
+      },
+      "source": [
+        " from random import shuffle\n",
+        "mylist=[100,1,2,3,30,40,\"hi\",\"hello\"]\n",
+        "print(\"List before shuffling:\",mylist)\n",
+        "shuffle(mylist)\n",
+        "print(\"List after shuffling:\",mylist)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "List before shuffling: [100, 1, 2, 3, 30, 40, 'hi', 'hello']\n",
+            "List after shuffling: [100, 30, 2, 3, 40, 'hello', 1, 'hi']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7akc9XlnCStp",
+        "colab_type": "text"
+      },
+      "source": [
+        " 5.Write a program to generate random numbers between 1,10000 and difference between each random number is 50."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "2BO3QPBZCYoF",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        },
+        "outputId": "6bb14176-5bf4-4bc0-bf08-0f5c4c76d756"
+      },
+      "source": [
+        " import random\n",
+        "print(\"Random number between 1 and 10000 which has a step of 50:\",random.randrange(1,10000,50))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Random number between 1 and 10000 which has a step of 50: 3551\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "oVY2_lsZCqEO",
+        "colab_type": "text"
+      },
+      "source": [
+        " 6.Write a python program by using math module to find\n",
+        "1.sin 60°"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "5UYKpT0PCvUT",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "615ae04b-7b8e-4253-80a1-1dc62f82692b"
+      },
+      "source": [
+        " import math\n",
+        "math.sin(60)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "-0.3048106211022167"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "x8dy-a5iC1vm",
+        "colab_type": "text"
+      },
+      "source": [
+        "2.cos(pi)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "NFf-Cab0DA52",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "517a5a7c-b3c6-4080-d4f3-937db2d4b0ae"
+      },
+      "source": [
+        "import math\n",
+        "math.cos (math.pi)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "-1.0"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "mF777pdTDvDE",
+        "colab_type": "text"
+      },
+      "source": [
+        " 3.tan 90°"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "gl-RygefDyKl",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "9d9340e0-fa8a-41f7-9655-0828d77e7681"
+      },
+      "source": [
+        " import math\n",
+        "math.tan(90)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "-1.995200412208242"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 9
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "2D-PfykID5y4",
+        "colab_type": "text"
+      },
+      "source": [
+        " 4.angle of sin(0.8660254037844386)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "4jjyaBXKD_M-",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "a7d896b8-649b-465f-9817-d7268767286a"
+      },
+      "source": [
+        " import math\n",
+        "math.sin(0.8660254037844386)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "0.7617599814162892"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "sA4UnyOpEFe4",
+        "colab_type": "text"
+      },
+      "source": [
+        " 5.5^8"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_6uOBtngESqe",
+        "colab_type": "text"
+      },
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "CHoPGWK-EK7m",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "25ad39df-c5d1-42cd-a7bf-871eb2fa58b0"
+      },
+      "source": [
+        " import math\n",
+        "math.pow(5,8)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "390625.0"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "M6_2KTVpEaJi",
+        "colab_type": "text"
+      },
+      "source": [
+        " 6.square root of 400"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "oz1DTmYKEetl",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "3c6aa505-cfc4-42f2-99e3-f906fd83cabb"
+      },
+      "source": [
+        "import math\n",
+        "math.sqrt(400)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "20.0"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 12
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_q5mAMDsEogK",
+        "colab_type": "text"
+      },
+      "source": [
+        " 7.the value of 5^e"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "4FFBNGoyEtEx",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "a3b80e76-4b91-4246-9788-495d248e3da9"
+      },
+      "source": [
+        " import math\n",
+        "math.pow(5,math.e)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "79.43235916621322"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "DzbEuChRE3Mi",
+        "colab_type": "text"
+      },
+      "source": [
+        " 8. The value of Log(1024), base 2"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "OrhGcZysE8re",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "7ab768a6-07d8-46f4-8577-38cb38b487ea"
+      },
+      "source": [
+        " import math\n",
+        "math.log(1024,2)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "10.0"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Ytm-eHTrFBRP",
+        "colab_type": "text"
+      },
+      "source": [
+        " 9. The value of Log(1024), base 1"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ofm3lT3BFICy",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "99ff09a0-3b01-4bcc-ceff-0c79daab4d01"
+      },
+      "source": [
+        " import math\n",
+        "math.log(1024,10)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3.0102999566398116"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "loaX9KsrFNH7",
+        "colab_type": "text"
+      },
+      "source": [
+        " 10.The Floor and Ceiling value of 23.56"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "P3Esr1NSDW7L",
+        "colab_type": "text"
+      },
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "DtXIV1J8FbSL",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "6501084c-090c-4df0-8b34-e8eae8e6fe0f"
+      },
+      "source": [
+        " import math\n",
+        "math.ceil(23.56)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "24"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "G7uXA4-SFdfR",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "8b290124-af2b-4b9b-f870-f8ea30ffc59f"
+      },
+      "source": [
+        " import math\n",
+        "math.floor(23.56)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "23"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 18
+        }
+      ]
+    }
+  ]
+}
